@@ -1,0 +1,9 @@
+<nav class="site-menu"> 
+    <div class="wrapper"> 
+        <nav class="site-menu-container">
+            {{#foreach @blog.navigation}}
+                <a href="{{url absolute="true"}}">{{label}}</a>
+            {{/foreach}}
+        </nav>
+    </div>
+</nav>

@@ -1,0 +1,275 @@
+/*
+ *  Author: Elystus <elystus@gmail.com>
+ *  Version: v0.0.1
+ *  Description: Custom CSS theme for Ghost blogging platform
+ */
+
+/* Import Font */
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,700);
+
+/*  ___________________
+ *  || ~ CSS Index ~ ||
+ *  ~~~~~~~~~~~~~~~~~~~
+ *  1. General Styling
+ *  2. Global Classes
+ *  3. Specific Styling
+ *      3a. SiteMasthead
+ *      3b. Site Menu
+ *      3c. Posts
+ */
+
+/* ~ 1. General styling ~
+ * Style resets and body styling
+ */
+.clearfix{
+   clear:both;
+}
+
+*, *:focus {
+    border: 0;
+    margin: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+a {
+    color: #00BFFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0099CC;
+}
+
+a, a:hover {
+    transition: .3s ease all;
+}
+
+body {
+    font-family: 'Oxygen', sans-serif;
+    color: #3e3e3e;
+}
+
+
+/* ~ 2. Global Classes ~
+ * Styles the don't inherit to a single class or set of classes
+ */
+.wrapper {
+    width: 720px;
+    margin: 0 auto;
+}
+
+.blog-logo {
+    display: block;
+    background-size: cover;
+}
+
+/* 3a. Site Masthead */
+.site-masthead {
+    padding: 120px 0 80px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background: #333;
+}
+
+.site-masthead .site-logo {
+    margin-bottom: 30px;
+}
+
+.site-masthead .site-logo > a.blog-logo {
+    margin: 0 auto;
+    height: 150px;
+    width: 150px;
+}
+
+.site-masthead .masthead-content { }
+.site-masthead .masthead-content > h1 {
+    margin-bottom: 12px;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+.site-masthead .masthead-content > h2 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+
+/* 3b. Site Menu */
+.site-menu {
+    display: block;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 0px 2px 6px 0px #333;
+    -moz-box-shadow: 0px 2px 6px 0px #333;
+    box-shadow: 0px 2px 6px 0px #333;
+    
+    overflow: hidden;
+}
+
+/*
+.site-menu.logo-hidden .site-menu-brand { display: none; }
+
+.site-menu .site-menu-brand {
+    display: block;
+    float: left;
+    padding: 10px;
+    background: #333;
+    
+}
+
+.site-menu .site-menu-brand > a.blog-logo {
+    height: 40px;
+    width: 40px;
+}
+
+*/
+
+.site-menu .site-menu-container {
+    display: block;
+    width: 100%;
+    clear: both;
+    box-sizing: border-box;
+}
+
+.site-menu .site-menu-container > a {
+    display: inline-block;
+    float: left;
+    padding: 12px 0;
+    width: 25%;
+    text-align: center;
+    color: #4e4e4e;
+    font-size: 16px;
+}
+
+.site-menu a:hover { color: #00BFFF }
+
+/* 3c. Posts */
+.post-container { 
+    margin: 60px 0 30px;
+}
+
+.post-item {
+    margin-bottom: 35px;
+}
+.post-item:last-child { margin: 0; }
+
+.post-item > .post-header {
+    margin-bottom: 6px;
+}
+
+.post-item > .post-header h2 {
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: .25px;
+}
+
+.post-item > .post-excerpt { }
+
+.post-item > .post-excerpt p { 
+    margin-bottom: 12px;
+}
+
+.post-item > .post-excerpt > a {
+    display: block;
+    text-align: center;
+    width: auto;
+    margin: 0 auto;
+}
+
+.post-item > .post-meta {
+    margin-bottom: 8px;
+    overflow: hidden;
+    clear: both;
+}
+
+.post-item > .post-meta div {
+    float: left;
+}
+
+.post-item > .post-meta div p {
+    line-height: 21px;
+}
+
+.post-item > .post-meta div.post-tags {
+    float: right;
+    margin-right: 16px;
+}
+
+.post-item > .post-meta div.post-tags a {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 14px;
+    background: #00BFFF;
+    color: #fff;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+.post-item > .post-meta div.post-tags a:hover {
+    background: #0099CC;
+}
+
+.pagination {
+    position: relative;
+    margin: 0 auto;
+    padding: 18px;
+    width: 80%;
+    text-align: center;
+}
+
+.pagination .older-posts, .pagination .newer-posts {
+    position: absolute;
+}
+.pagination .older-posts { right: 0; }
+.pagination .newer-posts { left: 0; }
+
+/* 3f. Site Footer */
+.site-footer {
+    padding: 35px 0 45px;
+    color: #6e6e6e;
+    font-size: 16px;
+}
+
+.site-footer a {
+    color: inherit;
+}
+
+.site-footer a:hover {
+    color: #00BFFF;
+}
+
+.site-footer > .wrapper {
+    text-align: center;
+}
+
+.site-footer a {
+    color: inherit;
+}
+
+.site-footer .logo-container {
+    display: block;
+    margin: 0 auto 12px;
+    padding: 8px;
+    height: 46px;
+    width: 46px;
+    background: #3e3e3e;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.site-footer .logo-container .blog-logo {
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+
+.site-footer .copyright, .site-footer .poweredby {
+    display: block;
+}
+
+.site-footer section {
+    margin-bottom: 4px;
+    letter-spacing: .25px;
+}
+.site-footer section:last-child {margin: 0;}
