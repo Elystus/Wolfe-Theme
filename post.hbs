@@ -1,17 +1,11 @@
 {{!< default}}
 
-<div class="wrapper">
-    <div class="page-header inverse-header" {{#if @blog.cover}}style="background-image: url('{{@blog.cover}}');"{{/if}}>
-        {{#if @blog.logo}}
-        <div class="blog-logo inverse-logo" >
-            <a class="blog-logo" href="{{@blog.url}}" style="background-image: url('{{@blog.logo}}');"></a>
-        </div>
-        {{else}}
-        <h2 class="blog-title">{{ @blog.title }}</h2>
-        {{/if}}
-        <a class="return-btn" href="/">Return Home</a>
-    </div>
-{{! Everything inside the #post tags pulls data from the post }}
+<div id="blog-masthead">
+    {{> "masthead_page"}}
+</div>
+
+{{> navigation}}
+{{! Everything inside the #post tags pulls data from the post }}<div class="wrapper">
 {{#post}}
 
 <main class="content" role="main">

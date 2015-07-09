@@ -1,0 +1,9 @@
+<div class="page-header inverse-header" {{#if @blog.cover}}style="background-image: url('{{@blog.cover}}');"{{/if}}>
+    {{#if @blog.logo}}
+    <div class="blog-logo inverse-logo" >
+        <a class="blog-logo" href="{{@blog.url}}" style="background-image: url('{{@blog.logo}}');"></a>
+    </div>
+    {{else}}
+    <h2 class="blog-title">{{ @blog.title }}</h2>
+    {{/if}}
+</div>

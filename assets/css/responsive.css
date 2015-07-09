@@ -1,0 +1,14 @@
+@media only screen and (max-width: 860px) {
+    div.wrapper {
+        max-width: 680px;
+    }
+}
+
+@media all and (max-width: 680px) {
+    div.wrapper {
+        max-width: 620px !important;
+        width: auto;
+        margin: 0 15px;
+    }
+    .blog-menu .wrapper { margin: 0; }
+}

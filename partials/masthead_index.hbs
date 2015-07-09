@@ -1,0 +1,13 @@
+<div class="blog-masthead" {{#if @blog.cover}}style="background-image: url('{{@blog.cover}}');"{{/if}}>
+    <div class="wrapper">
+        {{#if @blog.logo}}
+        <div class="blog-logo">
+            <a class="blog-logo" href="{{@blog.url}}" style="background-image: url('{{@blog.logo}}');"></a>
+        </div>
+        {{/if}}
+        <div class="masthead-content">
+            <h1>{{@blog.title}}</h1>
+            <h2>{{@blog.description}}</h2>
+        </div>
+    </div>
+</div>
