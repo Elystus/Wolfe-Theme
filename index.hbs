@@ -1,8 +1,11 @@
 {{!< default}}
 
-{{! Include the site masthead - partials/masthead.hbs}}
+{{! Include the blog masthead - partials/masthead.hbs}}
+
 {{> "masthead"}}
-{{> navigation}}
+<div class="brand-hidden blog-menu-inline">
+    {{> navigation}}
+</div>
 
 {{! Page Content}}
 <main id="content" class="content" role="main">

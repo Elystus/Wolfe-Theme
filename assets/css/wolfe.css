@@ -21,7 +21,7 @@
 /* ~ 1. General styling ~
  * Style resets and body styling
  */
-.clearfix{
+.clearfix {
    clear:both;
 }
 
@@ -34,12 +34,12 @@
 }
 
 a {
-    color: #00BFFF;
+    color: #0099CC;
     text-decoration: none;
 }
 
 a:hover {
-    color: #0099CC;
+    color: #00BFFF;
 }
 
 a, a:hover {
@@ -66,7 +66,7 @@ body {
 }
 
 /* 3a. Site Masthead */
-.site-masthead {
+.blog-masthead {
     padding: 120px 0 80px;
     width: 100%;
     text-align: center;
@@ -74,80 +74,100 @@ body {
     background: #333;
 }
 
-.site-masthead .site-logo {
+.blog-masthead .blog-logo {
     margin-bottom: 30px;
 }
 
-.site-masthead .site-logo > a.blog-logo {
+.blog-masthead .blog-logo > a.blog-logo {
     margin: 0 auto;
     height: 150px;
     width: 150px;
 }
 
-.site-masthead .masthead-content { }
-.site-masthead .masthead-content > h1 {
+.blog-masthead .masthead-content { }
+.blog-masthead .masthead-content > h1 {
     margin-bottom: 12px;
     font-size: 36px;
     letter-spacing: 1px;
 }
 
-.site-masthead .masthead-content > h2 {
+.blog-masthead .masthead-content > h2 {
     font-size: 22px;
     font-weight: 400;
 }
 
-
 /* 3b. Site Menu */
-.site-menu {
-    display: block;
-    margin-bottom: 25px;
-    -webkit-box-shadow: 0px 2px 6px 0px #333;
-    -moz-box-shadow: 0px 2px 6px 0px #333;
-    box-shadow: 0px 2px 6px 0px #333;
+.blog-menu {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: table;
+    -webkit-box-shadow: 0px 2px 4px 0px #888;
+    -moz-box-shadow: 0px 2px 4px 0px #888;
+    box-shadow: 0px 2px 4px 0px #888;
+    top: 0;
+    background-color: rgba(255,255,255, 0.90)
+        
+}
+.blog-menu-inline .blog-menu { position: static; }
+.brand-hidden .blog-brand { display: none !important; }
+.blog-menu::after {
     
-    overflow: hidden;
 }
 
-/*
-.site-menu.logo-hidden .site-menu-brand { display: none; }
-
-.site-menu .site-menu-brand {
-    display: block;
+.blog-menu .blog-brand {
+    display: inline-block;
     float: left;
-    padding: 10px;
-    background: #333;
-    
+    height: 60px;
+    padding: 8px 16px;
+    box-sizing: border-box;
 }
+.blog-menu.blog-menu-inverse .blog-brand { background: #333; }
 
-.site-menu .site-menu-brand > a.blog-logo {
+.blog-menu .blog-brand span.blog-logo {
+    display: inline-block;
     height: 40px;
     width: 40px;
+    background-size: cover;
 }
 
-*/
+.blog-menu .blog-brand span.blog-title {
+    display: inline-block;
+    margin-left: 4px;
+    font-size: 20px;
+    line-height: 40px;
+    vertical-align: top;
+    transition: ease .3s all;
+}
+.blog-menu.blog-menu-inverse .blog-brand span.blog-title { color: #fff; }
+.blog-menu .blog-brand:hover span.blog-title { color: #00BFFF; }
 
-.site-menu .site-menu-container {
-    display: block;
-    width: 100%;
-    clear: both;
+.blog-menu .blog-menu-container {
+    width: auto;
+    display: table-cell;
+    display: flex; 
+    justify-content: space-around;
+}
+
+.blog-menu .blog-menu-container > a {
+    display: inline-block;
+    padding: 0 22px;
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    height: 60px;
+    line-height: 60px;
     box-sizing: border-box;
 }
 
-.site-menu .site-menu-container > a {
-    display: inline-block;
-    float: left;
-    padding: 12px 0;
-    width: 25%;
-    text-align: center;
-    color: #4e4e4e;
-    font-size: 16px;
+.blog-menu .blog-menu-container a:hover { 
+    color: #0099CC; 
+    border-bottom: 2px solid #0099CC;
 }
-
-.site-menu a:hover { color: #00BFFF }
 
 /* 3c. Posts */
 .post-container { 
-    margin: 60px 0 30px;
+    margin: 40px 0 30px;
 }
 
 .post-item {
@@ -201,13 +221,13 @@ body {
     display: inline-block;
     padding: 2px 6px;
     font-size: 14px;
-    background: #00BFFF;
+    background: #0099CC;
     color: #fff;
     border-radius: 2px;
     box-sizing: border-box;
 }
 .post-item > .post-meta div.post-tags a:hover {
-    background: #0099CC;
+    background: #00BFFF;
 }
 
 .pagination {
@@ -224,52 +244,215 @@ body {
 .pagination .older-posts { right: 0; }
 .pagination .newer-posts { left: 0; }
 
+
+/* 3d. Post Page View */
+.wrapper main.content {
+    margin-top: 45px;
+}
+
+.post .post-header .post-title {
+    font-size: 28px;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+
+.post .post-meta {
+    margin-bottom: 12px;
+}
+
+.post .post-header {
+    margin-bottom: 20px;
+}
+
+.post img {
+    display: block;
+    margin: 25px auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+.post p { margin-bottom: 18px; }
+
+.post code {
+    display: block;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background: #fcfcfc;
+}
+
+.post ul { margin: 0 30px 18px; }
+
+.post h1 { font-size: 30px; }
+.post h2 { font-size: 24px; }
+.post h3 { font-size: 20px; }
+.post h4 { font-size: 18px; }
+.post h5 { font-size: 16px; font-weight: 400; }
+.post h6 { font-size: 12px; font-weight: 400; }
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
+    margin: 16px 0 8px;
+    letter-spacing: .5px;
+}
+.post p:last-child {margin: 0;}
+.post h1:first-child, .post h2:first-child, .post h3:first-child, .post h4:first-child, .post h5:first-child, .post h6:first-child { margin-top: 0; }
+
+.post-footer {
+    margin-top: 20px;
+    padding: 12px 0 0;
+    border-top: 1px solid #ccc;
+    clear: both;
+    overflow: hidden;
+}
+
+.post-footer section.author { float: left; }
+.post-footer section.author h5 { line-height: 22px; }
+
+.post-footer nav.share { float: right; }
+.post-footer nav.share a {
+    padding-left: 12px;
+    font-size: 18px;
+    line-height: 22px;
+}
+
 /* 3f. Site Footer */
-.site-footer {
+.blog-footer {
     padding: 35px 0 45px;
     color: #6e6e6e;
     font-size: 16px;
 }
 
-.site-footer a {
+.blog-footer a {
     color: inherit;
 }
 
-.site-footer a:hover {
-    color: #00BFFF;
+.blog-footer a:hover {
+    color: #0099CC;
 }
 
-.site-footer > .wrapper {
+.blog-footer > .wrapper {
     text-align: center;
 }
 
-.site-footer a {
+.blog-footer a {
     color: inherit;
 }
 
-.site-footer .logo-container {
+.blog-footer .logo-container {
     display: block;
     margin: 0 auto 12px;
-    padding: 8px;
     height: 46px;
     width: 46px;
+    padding: 4px;
     background: #3e3e3e;
-    border-radius: 2px;
     box-sizing: border-box;
 }
 
-.site-footer .logo-container .blog-logo {
+.blog-footer .logo-container .blog-logo {
     display: block;
-    height: 30px;
-    width: 30px;
+    height: 38px;
+    width: 38px;
 }
 
-.site-footer .copyright, .site-footer .poweredby {
+.blog-footer .copyright, .blog-footer .poweredby {
     display: block;
 }
 
-.site-footer section {
+.blog-footer section {
     margin-bottom: 4px;
     letter-spacing: .25px;
 }
-.site-footer section:last-child {margin: 0;}
+.blog-footer section:last-child {margin: 0;}
+
+.page-header {
+    padding: 30px 0 0;
+    background-size: cover;
+    text-align: center;
+    -webkit-box-shadow: 1px 3px 4px 0px #888;
+    -moz-box-shadow: 1px 3px 4px 0px #888;
+    box-shadow: 1px 3px 4px 0px #888;
+}
+.page-header.inverse-header { background-color: #333;}
+.page-header a.blog-logo {
+    margin: 0 auto 5px;
+    height: 120px;
+    width: 120px;
+}
+
+.page-header h2.blog-title { 
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.page-header.inverse-header h2.blog-title{ color: #fff; }
+
+.page-header a.return-btn {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 8px 0;
+    text-align: center;
+    color: #fff;
+    background-color: #0099CC;
+}
+.page-header a.return-btn:hover { background-color: #00BFFF; }
+
+
+/* 5. Icons (Imported from Casper Theme) */
+@font-face {
+    font-family: "casper-icons";
+    src:url("../fonts/casper-icons.eot?v=1");
+    src:url("../fonts/casper-icons.eot?v=1#iefix") format("embedded-opentype"),
+        url("../fonts/casper-icons.woff?v=1") format("woff"),
+        url("../fonts/casper-icons.ttf?v=1") format("truetype"),
+        url("../fonts/casper-icons.svg?v=1#icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply these base styles to all icons */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "casper-icons", "Open Sans", sans-serif;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-decoration: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Each icon is created by inserting the correct character into the
+   content of the :before pseudo element. Like a boss. */
+.icon-ghost:before {
+    content: "\f600";
+}
+.icon-feed:before {
+    content: "\f601";
+}
+.icon-twitter:before {
+    content: "\f602";
+    font-size: 1.1em;
+}
+.icon-google-plus:before {
+    content: "\f603";
+}
+.icon-facebook:before {
+    content: "\f604";
+}
+.icon-arrow-left:before {
+    content: "\f605";
+}
+.icon-stats:before {
+    content: "\f606";
+}
+.icon-location:before {
+    content: "\f607";
+    margin-left: -3px; /* Tracking fix */
+}
+.icon-link:before {
+    content: "\f608";
+}
+.icon-menu:before {
+    content: "\f609";
+}

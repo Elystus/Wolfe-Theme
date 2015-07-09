@@ -1,7 +1,7 @@
-<div class="site-masthead" {{#if @blog.cover}}style="background-image: url('{{@blog.cover}}');"{{/if}}>
+<div id="blog-masthead" class="blog-masthead" {{#if @blog.cover}}style="background-image: url('{{@blog.cover}}');"{{/if}}>
     <div class="wrapper">
         {{#if @blog.logo}}
-        <div class="site-logo">
+        <div class="blog-logo">
             <a class="blog-logo" href="{{@blog.url}}" style="background-image: url('{{@blog.logo}}');"></a>
         </div>
         {{/if}}
