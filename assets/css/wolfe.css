@@ -67,7 +67,7 @@ body {
 
 /* 3a. Site Masthead */
 .blog-masthead {
-    padding: 120px 0 80px;
+    padding: 60px 0 50px;
     width: 100%;
     text-align: center;
     color: #fff;
@@ -75,13 +75,13 @@ body {
 }
 
 .blog-masthead .blog-logo {
-    margin-bottom: 30px;
+    margin-bottom: 18px;
 }
 
 .blog-masthead .blog-logo > a.blog-logo {
     margin: 0 auto;
-    height: 150px;
-    width: 150px;
+    height: 140px;
+    width: 140px;
 }
 
 .blog-masthead .masthead-content { }
@@ -100,11 +100,11 @@ body {
 .blog-menu {
     width: 100%;
     position: fixed;
-    -webkit-box-shadow: 0px 2px 4px 0px #888;
-    -moz-box-shadow: 0px 2px 4px 0px #888;
-    box-shadow: 0px 2px 4px 0px #888;
+    -webkit-box-shadow: 0px 1px 3px 0px #888;
+    -moz-box-shadow: 0px 1px 3px 0px #888;
+    box-shadow: 0px 1px 3px 0px #888;
     top: 0;
-    background-color: rgba(255,255,255, 0.95)
+    background-color: rgba(255,255,255, 0.95);
         
 }
 .blog-menu-inline { 
@@ -126,6 +126,9 @@ body {
     margin-right: 15px;
 }
 
+.placeholder {
+    min-height: 60px;
+}
 
 .blog-menu .blog-brand {
     display: inline-block;
@@ -189,11 +192,11 @@ body {
 
 /* 3c. Posts */
 .post-container { 
-    margin: 40px 0 30px;
+    margin: 60px 0 30px;
 }
 
 .post-item {
-    margin-bottom: 35px;
+    margin-bottom: 45px;
 }
 .post-item:last-child { margin: 0; }
 
@@ -231,8 +234,10 @@ body {
 .post-item a.read-more:hover { background-color: #00BFFF; }
 
 .post-item > .post-meta {
-    margin-bottom: 8px;
+    margin-top: 12px;
+    padding: 8px 0 0;
     overflow: hidden;
+    border-top: 1px solid #ccc;
     clear: both;
 }
 
@@ -246,7 +251,6 @@ body {
 
 .post-item > .post-meta div.post-tags {
     float: right;
-    margin-right: 16px;
 }
 
 .post-item > .post-meta div.post-tags a {
@@ -279,8 +283,9 @@ body {
 
 /* 3d. Post Page View */
 .wrapper main.content {
-    margin-top: 45px;
+    font-size: 18px;
 }
+main.content .post { margin-top: 45px; }
 
 .post .post-header .post-title {
     font-size: 28px;
@@ -290,48 +295,76 @@ body {
 
 .post .post-meta {
     margin-bottom: 12px;
+    font-size: 16px;
 }
 
 .post .post-header {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
 }
 
 .post img {
     display: block;
-    margin: 25px auto;
+    margin: 12px auto;
     max-width: 100%;
     text-align: center;
 }
 
-.post p { margin-bottom: 18px; }
+.post hr {
+    margin: 45px 0 35px;
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+}
+
+.post p { 
+    line-height: 24px;
+    letter-spacing: .25px;
+    margin-bottom: 18px;
+}
+
+.post blockquote {
+    margin: 12px 20px;
+    padding: 8px 12px;
+    background: #fcfcfc;
+    border-left: 8px solid #0099CC;
+}
 
 .post code {
     display: block;
-    padding: 16px;
+    margin: 12px 20px;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 2px;
-    background: #fcfcfc;
+    background: #f3f3f3;
+    overflow-x: auto;
+    overflow-y: visible;
+    letter-spacing: -.25px;
+    font-size: 16px;
 }
 
 .post ul { margin: 0 30px 18px; }
+.post ul > li { margin-bottom: 2px; }
+.post ul > li > ul { margin: 0 18px 0px;}
 
-.post h1 { font-size: 30px; }
-.post h2 { font-size: 24px; }
-.post h3 { font-size: 20px; }
-.post h4 { font-size: 18px; }
+.post h1 { font-size: 32px; }
+.post h2 { font-size: 26px; }
+.post h3 { font-size: 22px; }
+.post h4 { font-size: 20px; }
 .post h5 { font-size: 16px; font-weight: 400; }
 .post h6 { font-size: 12px; font-weight: 400; }
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
-    margin: 16px 0 8px;
+    margin: 28px 0 8px;
     letter-spacing: .5px;
 }
 .post p:last-child {margin: 0;}
 .post h1:first-child, .post h2:first-child, .post h3:first-child, .post h4:first-child, .post h5:first-child, .post h6:first-child { margin-top: 0; }
 
 .post-footer {
-    margin-top: 20px;
+    margin-top: 35px;
     padding: 12px 0 0;
-    border-top: 1px solid #ccc;
+    border: 0;
+    border-top: 1px dashed #ccc;
     clear: both;
     overflow: hidden;
 }
@@ -344,7 +377,9 @@ body {
     padding-left: 12px;
     font-size: 18px;
     line-height: 22px;
+    color: #333;
 }
+.post-footer nav.share a:hover { color: #0099CC; }
 
 /* 3f. Site Footer */
 .blog-footer {
@@ -393,7 +428,6 @@ body {
 
 .page-header {
     padding: 60px 0 45px;
-    background-size: cover;
     text-align: center;
     -webkit-box-shadow: 1px 3px 4px 0px #888;
     -moz-box-shadow: 1px 3px 4px 0px #888;

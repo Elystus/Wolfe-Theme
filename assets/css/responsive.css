@@ -8,7 +8,8 @@
     div.wrapper {
         max-width: 620px !important;
         width: auto;
-        margin: 0 15px;
+        margin: 0 auto;
+        padding: 0 15px;
     }
-    .blog-menu .wrapper { margin: 0; }
+    .blog-menu .wrapper {  padding: 0; }
 }

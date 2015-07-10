@@ -7,6 +7,12 @@
             <header class="post-header">
                 <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
             </header>
+            
+            <section class="post-excerpt">
+                <p>{{excerpt words="35"}} ...</p>
+                
+                <a class="read-more" href="{{url}}">Read More</a>
+            </section>
             <footer class="post-meta">
                 <div>
                     <p>
@@ -20,10 +26,6 @@
                 </div>
                 {{/if}}
             </footer>
-            <section class="post-excerpt">
-                <p>{{excerpt words="35"}} ...</p>
-                <a class="read-more" href="{{url}}">Read More</a>
-            </section>
             
         </article>
         {{/foreach}}
