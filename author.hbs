@@ -1,0 +1,37 @@
+{{!< default}}
+
+<div id="blog-masthead">
+    {{> "masthead_page"}}
+</div>
+
+{{> navigation}}
+
+<div class="wrapper">
+    {{#author}}
+
+        <section class="author-profile inner">
+            {{#if image}}
+            <div class="author-image" >
+                <img style="background-image: url({{image}})" />
+            </div>
+            {{/if}}
+            <h1 class="author-title">{{name}}</h1>
+            {{#if bio}}
+                <h2 class="author-bio">{{bio}}</h2>
+            {{/if}}
+            <div class="author-meta">
+                {{#if location}}<span class="icon-location">{{location}}</span>{{/if}}
+                {{#if website}}<span class="icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+                <span><i class="icon-stats"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
+            </div>
+        </section>
+    {{/author}}
+
+    {{! The main content area on the homepage }}
+    <main class="content" role="main">
+
+        {{! The tag below includes the post loop - partials/loop.hbs }}
+        {{> "loop"}}
+
+    </main>
+</div>
