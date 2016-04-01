@@ -279,6 +279,7 @@ nav.navbar.navbar-inverse .navbar-brand:hover {
 }
 
 /* Wolfe Post Styling */
+.post-content { padding-top: 20px; }
 .post-content h1,
 .post-content h2,
 .post-content h3 {
