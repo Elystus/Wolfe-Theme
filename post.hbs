@@ -1,22 +1,12 @@
 {{!< default}}
 
-<div id="blog-masthead">
-    {{> "masthead_page"}}
-</div>
-
-{{> navigation}}
-{{! Everything inside the #post tags pulls data from the post }}<div class="wrapper">
+{{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<main class="content" role="main">
+{{> "masthead_post"}}
+{{navigation}}
+<div class="container content" role="main">
     <article class="{{post_class}}">
-
-        <header class="post-header">
-            <h1 class="post-title">{{title}}</h1>
-            <section class="post-meta">
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
-            </section>
-        </header>
 
         <section class="post-content">
             {{content}}
@@ -25,6 +15,11 @@
         <footer class="post-footer">
 
         {{! Everything inside the #author tags pulls data from the author }}
+        <section class="date">
+            <h5 class="post-meta">
+                Posted on <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time> {{tags prefix=" on "}}
+            </h5>
+        </section>
         {{#author}}
             <section class="author">
                 <h5>Posted by <a href="{{url}}">{{name}}</a></h5>
@@ -41,10 +36,7 @@
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                 </a>
             </nav>
-
         </footer>
-
     </article>
-</main>
-{{/post}}
 </div>
+{{/post}}

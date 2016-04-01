@@ -1,6 +1,12 @@
 <div class="container-fluid no-padding masthead-background background" {{#if @blog.cover}}style="background-image: url('{{@blog.cover}}');"{{/if}}>
     <div class="container container-mast">
         <div class="row-fluid">
+            <ol class="breadcrumb">
+                <li><a href="/#">Posts</a></li>
+                <li class="active">{{title}}</li>
+            </ol>
+        </div>
+        <div class="row-fluid">
             <div class="page-header">
                 <h2>        
                     {{title}} 

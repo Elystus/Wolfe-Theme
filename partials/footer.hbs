@@ -1,17 +1,9 @@
-<footer class="blog-footer clearfix">
-    <div class="wrapper">
-        {{#if @blog.logo}}
-        <div class="logo-container">
-            <a href="http://elyst.us"><span class="blog-logo" style="background-image: url('{{@blog.logo}}');"></span></a>
+<div class="site-footer container-fluid background" {{#if @blog.cover}}style="background-image: url('{{@blog.cover}}');"{{/if}} role="footer">
+    <div class="row footer-content">
+        <div class="col-md-4 col-md-offset-4 text-center">
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+            <section class="theme">Styled with <a href="https://github.com/Elystus/Wolfe-Theme">Wolfe</a></section>
+            <section class="copyright">&copy;  {{date format="YYYY"}} <a href="http://elyst.us">Elystus</a></section>
         </div>
-        {{/if}}
-        <section class="copyright">
-            &copy;  {{date format="YYYY"}} <a href="http://elyst.us">Elystus</a> 
-        </section>
-        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
-        <section class="theme">
-            Styled with
-            <a href="https://github.com/Elystus/Wolfe-Theme">Wolfe</a>
-        </section>
     </div>
-</footer>
+</div>

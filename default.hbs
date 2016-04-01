@@ -15,15 +15,14 @@
     <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
 
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/wolfe.css"}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset "css/responsive.css"}}" />
-
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/wolfe-theme.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.css"}}" />
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
 
 <body>
-    
     {{{ body }}}
 
     {{> "footer"}}
@@ -32,8 +31,8 @@
     {{ghost_foot}}
 
     {{! The main JavaScript file for Wolfe }}
-    <script type="text/javascript" src="{{asset "js/jquery-1.11.3.min.js"}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/wolfe.js"}}"></script>
-
 </body>
 </html>

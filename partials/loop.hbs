@@ -1,31 +1,20 @@
-<div class="wrapper">
+<div class="container" data-spy="scroll" data-target="#posts" id="posts">
+    {{#foreach posts}}
+        <div class="row-fluid margin-bottom">
+            <div class="page-header">
+                <h3>{{{title}}}  <small><time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time></small></h3>
+            </div>
 
-    {{! This is the post loop - each post will be output using this markup }}
-    <div class="post-container">
-        {{#foreach posts}}
-        <article class="post-item">
-            <header class="post-header">
-                <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-            </header>
-            
-            <section class="post-excerpt">
-                <p>{{excerpt words="35"}} ...</p>
-                
-                <a class="read-more" href="{{url}}">Read More</a>
-            </section>
-            <footer class="post-meta">
-                <div>
-                    <p>
-                        {{author}}
-                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-                    </p>
-                </div>
-            </footer>
-            
-        </article>
-        {{/foreach}}
-    </div>
+            <div class="post-preview" type="section">
+                <p>{{excerpt words="55"}} ...</p>
+            </div>
 
+            <a class="btn btn-block btn-default btn-wolfe" href="{{url}}">Read More</a>
+        </div>
+    {{/foreach}}
+    
     {{! Previous/next page links - displayed on every page }}
+    <div class="text-center">
     {{pagination}}
+</div>
 </div>
